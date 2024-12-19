@@ -108,7 +108,7 @@ Open-ended_Curriculum_Learning_POET_2D_Car_obstacle-course_domain/
 ### **Installation**
 1. Clone this repository:
    ```bash
-   git clone https://github.com/MichaelCorelli/Open-ended_Curriculum_Learning_POET_2D_Car_obstacle-course_domain
+   git clone https://github.com/GianmarcoDonnesi/Open-ended_Curriculum_Learning_POET_2D_Car_obstacle-course_domain
    ```
 
 2. Install the required packages:
