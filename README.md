@@ -3,7 +3,7 @@
 ## **Overview**
 This project implements a reinforcement learning framework based on the **Paired Open-Ended Trailblazer (POET)** algorithm. The goal is to train a 2D car agent to navigate dynamically evolving obstacle courses while simultaneously evolving the environments for progressive learning.
 
-The environment is built using **Box2D** and **Pygame**, and the agent is trained using **DOuble Deep Q-Learning (DDQN)**. The POET algorithm is adapted to handle 2D car-specific challenges, such as ramps, bumps, and holes. The algorithm causes the obstacles we choose to change their size so that the agent improves its performance.
+The environment is built using **Box2D** and **Pygame**, and the agent is trained using **Double Deep Q-Learning (DDQN)**. The POET algorithm is adapted to handle 2D car-specific challenges, such as ramps, bumps, and holes. The algorithm causes the obstacles we choose to change their size so that the agent improves its performance.
 
 This project was developed for the **Reinforcement Learning course A.Y. 2024/2025**.
 
@@ -25,7 +25,7 @@ This project was developed for the **Reinforcement Learning course A.Y. 2024/202
 - **Co-evolution**: simultaneous evolution of the agent's policies and the difficulties of the environment, in fact POET allows environments to evolve dynamically. The obstacles created are adapted to the agent in its environment having characteristics not too easy and not too difficult and try to improve the performance of the machine by placing obstacles with an adequate and increasing difficulty. The algorithm also manages the location of obstacle creation, to avoid them being generated at coincident points.
 - **Novelty ranking**: promotes diversity by evaluating the novelty of new environments.
 - **Minimal Criterion (MC)**: ensures that environments meet specific performance thresholds before being added, allowing these thresholds to dynamically vary in fixed ranges.
-- **Policy Transfer**: Transfers learned policies between environments to tackle harder challenges.
+- **Policy Transfer**: transfers learned policies between environments to tackle harder challenges.
 
 ### 4. **Policy Network**
 - Neural network-based policy optimization with:
@@ -63,12 +63,12 @@ Open-ended_Curriculum_Learning_POET_2D_Car_obstacle-course_domain/
 
 #### **`poet.py`**
 - Implements the **POET** algorithm:
-  - `main_loop`: Main POET training and evolution loop. In this it calls the main functions and performs these activities:
+  - `main_loop`: main POET training and evolution loop. In this it calls the main functions and performs these activities:
     - create new environments from the active ones
     - improve the agents in their environments
     - try to move the current agents from one environment to another
-  - `mutate_envs`: Mutates environments and evaluates offspring.
-  - `evaluate_candidates`: Updates policies using neural network and the DDQN algorithm or by Evolution Strategies.
+  - `mutate_envs`: mutates environments and evaluates offspring.
+  - `evaluate_candidates`: updates policies using neural network and the DDQN algorithm or by Evolution Strategies.
 
 #### **`model.py`**
 - The **Policy Network**
@@ -154,11 +154,11 @@ python main.py --profile
 
 ## **Project Workflow**
 
-1. **Initialize Environment**: Create a basic 2D car simulation.
-2. **Agent Training**: Train the car agent using Double DQN on the initial environment.
-3. **Environment Mutation**: Gradually evolve environments by adding/changing obstacles.
-4. **Policy Transfer**: Transfer trained policies between environments to tackle harder challenges.
-5. **Evaluation**: Assess agent performance and log metrics.
+1. **Initialize Environment**: create a basic 2D car simulation.
+2. **Agent Training**: train the car agent using Double DQN on the initial environment.
+3. **Environment Mutation**: gradually evolve environments by adding/changing obstacles.
+4. **Policy Transfer**: transfer trained policies between environments to tackle harder challenges.
+5. **Evaluation**: assess agent performance and log metrics.
 
 ---
 
